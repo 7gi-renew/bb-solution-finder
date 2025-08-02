@@ -1,19 +1,18 @@
-import { useState } from "react";
+// import { useEffect } from "react";
 import "./App.css";
+// import { GoogleGenAI } from "@google/genai";
+// import { fetchData } from "./utils/supabase-function";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Routing/Router";
 
-export default function App() {
-  const [count, setCount] = useState(0);
-
+function App() {
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   );
 }
+
+export default App;
