@@ -209,15 +209,15 @@ export function lastCategory(val1: string, val2: string, val3: string) {
           switch (val3) {
             case "平常心":
               return [
-                { name: "得点圏", value: "value4-2-3-1" },
-                { name: "劣勢時", value: "value4-1-3-2" },
-                { name: "ボールカウント", value: "value4-1-3-2" },
+                { name: "得点圏", value: "打撃_平常心_得点圏" },
+                { name: "劣勢時", value: "打撃_平常心_劣勢時" },
+                { name: "ボールカウント", value: "打撃_平常心_ボールカウント" },
               ];
             case "サインプレー":
               return [
-                { name: "バント/スクイズ", value: "value4-2-3-1" },
-                { name: "エンドラン", value: "value4-1-3-2" },
-                { name: "待球", value: "value4-1-3-2" },
+                { name: "バント/スクイズ", value: "打撃_サインプレー_バント/スクイズ" },
+                { name: "エンドラン", value: "打撃_サインプレー_エンドラン" },
+                { name: "待球", value: "打撃_サインプレー_待球" },
               ];
             case "対投手":
               return [

@@ -28,8 +28,8 @@ export const fetchProblemData = async () => {
 };
 
 // 結果表示ページでデータを保存する処理
-export const insertSolutionData = async (val1: string, val2: string, val3: string) => {
-  const { data, error } = await supabase.from("Solution Data").insert({ solution_text: val1, practice_text: val2, video_id: val3 });
+export const insertSolutionData = async (val1: string, val2: string, val3: string, val4: string) => {
+  const { data, error } = await supabase.from("Solution Data").insert({ solution_text: val1, practice_text: val2, video_id: val3, practice_category: val4 });
 
   if (error) {
     throw new Error(error.message);
@@ -47,7 +47,7 @@ export const fetchSolutionData = async () => {
   }
 
   const datas = response.data.map((value) => {
-    return solutionTypeBase.problemType(value.id, value.created_at, value.solution_text, value.practice_text, value.video_id);
+    return solutionTypeBase.solutionType(value.id, value.created_at, value.solution_text, value.practice_text, value.video_id, value.practice_category);
   });
 
   return datas;

@@ -4,13 +4,14 @@ type Props = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children?: ReactNode;
   disabled?: boolean;
+  addClass?: string;
   fullSize: boolean;
 };
 
-export const SecondaryButton: React.FC<Props> = ({ onClick, children, disabled, fullSize }) => {
+export const SecondaryButton: React.FC<Props> = ({ onClick, children, disabled, fullSize, addClass }) => {
   return (
     <>
-      <button className={`py-[12px] text-blue-600 bg-white border-2 border-blue-600 font-bold rounded-[6px]  ${fullSize && `w-full`} hover:opacity-80 disabled:bg-gray-100 disabled:text-gray-900`} disabled={disabled} onClick={onClick!}>
+      <button className={`py-[12px] text-blue-600 bg-white border-2 border-blue-600 font-bold rounded-[6px]  ${fullSize && `w-full`} ${addClass} hover:opacity-80 disabled:bg-gray-100 disabled:text-black disabled:border-black`} disabled={disabled} onClick={onClick!}>
         {children}
       </button>
     </>

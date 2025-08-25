@@ -15,9 +15,9 @@ export class ProblemTypeBase {
 }
 
 export class solutionTypeBase {
-  constructor(public id: number, public created_at: number, public solution_text: string, public practice_text: string, public video_id: string) {}
+  constructor(public id: number, public created_at: string, public solution_text: string, public practice_text: string, public video_id: string, public practice_category: string) {}
 
-  public static problemType(id: number, created_at: number, solution_text: string, practice_text: string, video_id: string): solutionTypeBase {
-    return new solutionTypeBase(id, created_at, solution_text, practice_text, video_id);
+  public static solutionType(id: number, created_at: string, solution_text: string, practice_text: string, video_id: string, practice_category: string): solutionTypeBase {
+    return new solutionTypeBase(id, created_at, solution_text, practice_text, video_id, practice_category);
   }
 }
